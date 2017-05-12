@@ -1,0 +1,145 @@
+body{
+      background-color: rgb(238, 238, 238);/*new */
+}
+.container {
+    width: 600px;
+    /*width: 50%;*/
+    vertical-align: middle;
+   /* padding: 30px;*/
+    margin-left: 0px;
+    background-color: rgb(238,238,238);
+    display: inline-block;
+  
+}
+header {
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+	padding: 30px;
+	font-family:monospaceserif;
+	font-weight:bold;
+}
+.form-container {
+	position : relative;
+	
+}
+.display-none {
+	display: none;
+}
+.display-block {
+	display: block;
+}
+.outer {
+	width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(#0D62C2,#2CB4F0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-40%,-10%);
+}
+div>input {
+    padding-left: 35px;
+    border: 0;
+    border-bottom: 1px solid lightgray;;*/
+    display: inline-block;
+  	width:100%;
+    padding: 20px 0px;
+    border: 0;
+    font-weight: normal;
+    postion: relative;
+    font-family: 'Open Sans', sans-serif;
+    background-color: inherit;
+    font-size: large;
+    padding-left: 35px;
+    border-bottom: 1px solid lightgray;
+    background-color: rgb(238,238,238);
+    
+}
+input[type="submit"] {
+    
+    background-color: inherit;
+    border: none;
+    color: black;
+    text-transform: capitalize;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    font-size: x-large;
+    top: 132px;
+    width: 94%;
+    box-shadow: 3px 8px 5px rgba(0,0,0,0.1);
+}
+.errordiv {
+	margin-bottom: 10px;
+	color: red;
+	position: fixed;
+    z-index: 1;
+   	font-family: 'Open Sans', sans-serif;
+    padding: 50px;
+    padding-left: 0px;
+}
+p{
+	color: red;
+}
+
+.circle {
+    width: 550px;
+    height: 559px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    transform: translate;
+    transform: translate(19%,21%);
+    background-color: rgb(238,238,238);
+	
+}
+.sign-in {
+   font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    position: relative;
+    z-index: 1;
+    margin-top: 106px;
+  
+}
+
+    
+.background {
+	display: inline-block;
+	width: 810px;
+	float: right;
+	position: fixed;
+	
+}
+.background img {
+	width: 810px;
+   height: auto;
+   margin: 0;
+   min-height: 100%;
+   /*min-width: 674px;*/
+   padding: 0;
+   position: fixed;
+   z-index: -1;
+ 
+
+}
+.sign-in-with-email {
+	font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    position: relative;
+    z-index: 1;
+}
+.input {
+   
+    margin-top: 210px;
+    z-index: 1;
+    position: relative;
+    width: 85%;
+    box-shadow: 25px 25px 25px rgba(195, 190, 190, 0.2);
+}
+.page-container {
+	width: 100%;
+	display: block;
+}

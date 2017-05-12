@@ -1,0 +1,44 @@
+header {
+	text-transform: capitalize;
+	text-align: left;
+	/*margin-bottom: 40px;*/
+	padding: 30px 70px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	border : none;
+	background: -webkit-linear-gradient(#0D62C2,#2CB4F0);
+	width: inherit;
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+.signout {
+	text-align: right;
+	display:inline-block;
+	position: relative;
+	left: 900px;
+	float: right;
+	cursor: pointer;
+}
+form.header {
+	    text-align: right;
+    	margin-left: 175px
+}
+.welcome {
+	text-align: left;
+	display:inline-block;
+	font-size: large;
+}
+input[type="submit"] {
+	background: inherit;
+    border: none;
+    font-size: large;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+form {
+	display: inline-block;
+}

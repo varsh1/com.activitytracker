@@ -1,0 +1,28 @@
+aside {
+	text-align: center;
+	padding: 5px;
+	padding-top: 20px;
+	position: fixed;
+	width: 200px;
+	background-color: #262A33;
+	color: white;
+	height: 100%;
+	
+}	
+
+aside div {
+	
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+aside> :first-child {
+	margin-top: 100px;
+	
+	}
+aside a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	opacity: 0.4;
+}

@@ -1,0 +1,49 @@
+.reportType button{
+	display: inline-block;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+section div{
+	/*margin-bottom: 30px;*/
+}
+.employeeList input {
+	margin-bottom: 30px;
+	margin-bottom: 30px;
+    width: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: medium;
+}
+div.error-message {
+	color: #D8000C;
+	border: 1px solid red;
+	width: 400px;
+	box-shadow: 1px 1px 1px rgb(255,0,0);
+	background-color: #FFBABA;
+	padding: 10px
+}
+.display-none {
+	display: none;
+}
+
+table.dataTable.no-footer {
+    width: 1000px;
+    border: 1px solid #111;
+    
+}
+select[name="project"] {
+	width: 45%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+}
+select {
+	 padding: 12px 20px;
+    box-sizing: border-box;
+}
+
+div.heading {
+	padding-top: 30px;
+}
+.validationMessage {
+	color: red;
+}

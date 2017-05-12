@@ -1,0 +1,43 @@
+td {
+	padding: 20px;
+	text-transform: capitalize;
+}
+section {
+	border: none;
+	margin-top: 50px;
+}
+table {
+	width: 700px;
+	border: 1px solid black;
+}
+thead {
+	text-align: right;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+table tr:even{
+    background-color: red;
+}
+table tr:odd{
+    background-color:#ffffff;
+}
+tr {
+	background-color: white;
+}
+h3 {
+	
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding-top: 80px;
+	position: relative;
+    left: 230px;
+}
+table.dataTable {
+	width: 1000px;
+}
+.numericCol{
+  float:right;
+}
+tr:nth-child(even) {
+    background: rgb(238,238,238);
