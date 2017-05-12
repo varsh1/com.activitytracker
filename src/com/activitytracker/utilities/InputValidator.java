@@ -13,7 +13,7 @@ public class InputValidator {
 	}
 	public static boolean passwordValidate(String password) {
 
-		final Pattern PASSWORD_REGEX_PATTERN = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
+		final Pattern PASSWORD_REGEX_PATTERN = Pattern.compile("^((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{8,})$");
 		Matcher matcher = PASSWORD_REGEX_PATTERN.matcher(password);
 		return matcher.find();
 	}

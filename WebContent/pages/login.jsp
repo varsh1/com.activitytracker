@@ -14,7 +14,7 @@
 	<div class="page-container">
 		<div class="container">
 			<div class="form-container">
-				<form method="post" action="<%=request.getContextPath() %>/Login" onSubmit="return validateCredentials()">
+				<form method="post" action="<%=request.getContextPath() %>/Login" onsubmit="return validateCredentials()">
 						  <div class="sign-in"> Sign In</div>
 						<div class="sign-in-with-email">Sign in with your email </div>
 						<div class="errordiv display-none">Invalid username or password!</div>

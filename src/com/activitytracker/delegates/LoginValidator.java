@@ -17,7 +17,7 @@ public class LoginValidator {
 		if(!InputValidator.emailValidate(userlogin.getUserName())) {
 			return ErrorMessages.INVALID_EMAIL_MESSAGE;
 		}
-		if(InputValidator.passwordValidate(userlogin.getPassword())) {
+		if(!InputValidator.passwordValidate(userlogin.getPassword())) {
 			return ErrorMessages.INVALID_PASSWORD_MESSAGE;
 		}
 		return "";

@@ -45,11 +45,19 @@ public class Login extends HttpServlet {
 			String password = request.getParameter(RequestParameters.PASSWORD);
 			login.setUserName(userName);
 			login.setPassword(password);
-
+			String errorMessage = LoginValidator.validateCredentials(login);
+			if(errorMessage !="") {
+				request.setAttribute(RequestParameters.ERROR, errorMessage);
+				RequestDispatcher rd = request.getRequestDispatcher("/pages/login.jsp");
+				rd.forward(request, response);
+				return;
+			}
 			EmployeeDetailsResponse employeedetailsobj = LoginValidator.validateLogin(login);
+			
 			if (employeedetailsobj == null) {
 
 				request.setAttribute(RequestParameters.ERROR, LoginValidator.userDoesNotExists());
+				
 				RequestDispatcher rd = request.getRequestDispatcher("/pages/login.jsp");
 				rd.forward(request, response);
 
@@ -74,7 +82,7 @@ public class Login extends HttpServlet {
 			// TODO Auto-generated catch block
 			exceptionLogger.info(Thread.currentThread().getStackTrace()[1].getMethodName());
 			exceptionLogger.log(Level.SEVERE, e.getMessage(), e);
-			e.printStackTrace();
+			//e.printStackTrace();
 			RequestDispatcher rd = request.getRequestDispatcher("/error.jsp");
 			rd.forward(request, response);
 
