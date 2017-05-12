@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.activitytracker.dto.BasicEmployeeDetails;
 import com.activitytracker.dto.EmployeeDetailsResponse;
+import com.activitytracker.dto.EmployeeManagerDetails;
 import com.activitytracker.dto.ProjectDetailsResponse;
 import com.google.gson.Gson;
 import com.activitytracker.constants.RequestParameters;
@@ -54,8 +55,7 @@ public class ManagerEmployeeMapping extends HttpServlet {
 			int projectId = project.getProjectId();
 			projectIdSet.add(projectId);
 		}
-		
-		HashSet<BasicEmployeeDetails>employeeSet = ManagerEmployeeMapper.getEmployeesUnderManager(employeeId, projectIdSet);
+		HashSet<EmployeeManagerDetails>employeeSet = ManagerEmployeeMapper.getEmployeesUnderManager(employeeId, projectIdSet);
 		String employee = gson.toJson(employeeSet);
 		response.getWriter().print(employee);
 	}

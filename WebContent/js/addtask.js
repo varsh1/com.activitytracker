@@ -6,6 +6,7 @@ $(function() {
 	var taskId = $("input[name=taskid]");
 	var successMessage = $("div.success-message");
 	var errorMessage = $("div.error-message");
+	var taskDetails;
 	
 	//$("div.submit-success").css("display","none");
 	var mydata;
@@ -28,6 +29,7 @@ $(function() {
 			scrollTop : $(this).offset().top - 25
 		}, 10);
 	});
+	
 
 	$(taskName).autocomplete(
 			{

@@ -13,7 +13,8 @@ $(function() {
 	var employeeId = $("input[name=employeeid]");
 	var errorMessage = $("div.error-message");
 	var successMessage = $("div.success-message");
-	
+	var employeeArray = [];
+	var employeeNameArray = [];
 	$(projectsummary).on("click", function() {
 		$(projectList).removeClass("hidden");
 		if(!employeeList.hasClass("hidden")) {
@@ -21,49 +22,58 @@ $(function() {
 		}
 		
 	});
+	$.ajax({
+		type: "POST",
+		url: context+ "/ManagerEmployeeMapping",
+		success: function(data) {
+			console.log(data);
+			employeelist = $.parseJSON(data);
+			
+			var keys = Object.keys(employeelist);
+		    keys.forEach(function(key){
+		    	employeeArray.push(employeelist[key]);
+		    });
+		    employeeArray.forEach(function (employee)   {
+		    	employeeNameArray.push(employee.employeeName);
+		    })
+		    console.log(employeeArray);
+		}
+	});
 	
 	$(employeesummary).on("click", function() {
 		$(employeeList).removeClass("hidden");
 		if(!$(projectList).hasClass("hidden")) {
 			$(projectList).addClass("hidden");
+			
 		}
+		
 		
 	});
 	
-	$(employeeNameInput).autocomplete({
-		
-		minLength: 0,
-		source : function(request, response) {
+
+	
+	
+	$(employeeNameInput).autocomplete(
+			{
+				minLength: 0,
 			
-			$.ajax({
-				type : "POST",
-				url : context + "/ManagerEmployeeMapping",
+				source: employeeArray,
+				focus: function( event, ui ) {
+		            $( employeeNameInput).val( ui.item.label);
+		            return false;
+		        },
 				
-				success : function(data) {
+		        select: function( event, ui ) {
+		        	$(employeeName).val(ui.item.label); 
+					$(employeeId).val(ui.item.value);
 
-					mydata = $.parseJSON(data);
-					response(mydata);
+		            return false;
+		        },
+				
 					
-					response($.map(mydata, function(data, index) {
-						return {
-							label : data.employeeName,
-							value : data.employeeId
-						};
-						
-					}));
-				},
-
-			});
-		},
-		select : function(event, ui) {
-			event.preventDefault();
-			console.log("Selected: " + ui.item.label + " - "+ ui.item.value);
-			$(employeeName).val(ui.item.label); 
-			$(employeeId).val(ui.item.value);
-
-		}
-	}).on('focus', function(event) {
-	    $(this).autocomplete("search", "");});
+			}).on('focus', function(event) {
+			    $(this).autocomplete("search", "");});;    
+	
 	
 	
 	$(getprojectreport).on("click", function() {
